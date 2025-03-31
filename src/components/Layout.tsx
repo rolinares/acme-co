@@ -9,7 +9,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Head>
-        <title>Static Content CMS</title>
+        <title>Welcome to Acme</title>
       </Head>
       <main className="p-8">{children}</main>
     </>

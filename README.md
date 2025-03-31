@@ -2,7 +2,7 @@
 
 ## 📌 **Overview**
 
-This is a **full-stack Next.js application** that serves **static content pages** based on a Markdown file (`index.md`) found inside folders in the `content/` directory. The pages are rendered using a **template.html** file, with a placeholder `{{content}}` dynamically replaced by Markdown content.
+This is a **full-stack Next.js application** that serves **static content pages** based on a Markdown file (`index.md`) found inside folders in the `content/` directory. The pages are rendered using a **Layuot.tsx** file, which receives a children with the Markdown content.
 
 📢 **Key Features:**
 
@@ -20,14 +20,14 @@ This is a **full-stack Next.js application** that serves **static content pages*
 
 Before running the project, make sure you have the following installed:
 
-- **Node.js** (>= 18.x recommended)
+- **Node.js** (>= 20.x recommended)
 - **npm** (comes with Node.js) or **yarn**
 
 ### **2️⃣ Clone the Repository**
 
 ```sh
-git clone https://github.com/YOUR_GITHUB_USERNAME/acme-static-cms.git
-cd acme-static-cms
+git clone https://github.com/rolinares/acme-co.git
+cd acme-co
 ```
 
 ### **3️⃣ Install Dependencies**
@@ -89,10 +89,15 @@ HomePage - getStaticProps
 
 This app is optimized for **Vercel**, but can also be deployed on Netlify, AWS, or any static hosting service.
 
+### Deployment on **Vercel**
+
+You can try it on: https://acme-co-cms.vercel.app/
+
 ## 📝 **Future Improvements**
 
 Some potential enhancements for the next version:
 
+- 🧼 Apply some sanitize techniques to avoid dangerous injections via `.md` files
 - 🌍 Multi-language support (i18n)
 - 📝 Admin panel to edit Markdown content via UI
 
@@ -115,3 +120,5 @@ Some potential enhancements for the next version:
 ## 🌟 **Final Notes**
 
 🚀 This project is a fully functional MVP for Acme Co’s CMS.
+
+💡 It can be easily extended with new features in the future.
