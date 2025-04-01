@@ -4,7 +4,6 @@ import matter from "gray-matter";
 import markdownIt from "markdown-it";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Layout from "@/components/Layout";
-import { useRouter } from "next/router";
 
 interface PageProps {
   content: string;
@@ -65,16 +64,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 const Page: React.FC<PageProps> = ({ content }) => {
-  const router = useRouter();
-
   return (
     <Layout>
-      <button
-        onClick={() => router.back()}
-        className="mb-5 px-4 py-2 bg-transparent text-white font-semibold rounded-lg shadow-md transition cursor-pointer"
-      >
-        ⬅ Back
-      </button>
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </Layout>
   );
